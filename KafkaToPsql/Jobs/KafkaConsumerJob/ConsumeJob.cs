@@ -18,7 +18,8 @@
             {
                 valueList.ForEach(kafkaVal => dbList.Add(new TestModel
                 {
-                    Id = Guid.NewGuid().ToString(),KafkaValue = kafkaVal
+                    Id = Guid.NewGuid().ToString(),
+                    KafkaValue = kafkaVal
                 }));
                 _dbContext.TestModels.AddRange(dbList);
                 _dbContext.SaveChanges();   
